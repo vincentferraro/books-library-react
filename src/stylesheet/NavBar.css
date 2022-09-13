@@ -1,0 +1,22 @@
+nav{
+    height: 7rem;
+    background-color: #01ADEF;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+img{
+    height: 5rem;
+    width: 5rem;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+ul{
+    display: flex;
+    justify-content: center;
+}
+li{
+    padding:1rem;
+    font-size:2rem;
+    list-style-type: none;
+}
