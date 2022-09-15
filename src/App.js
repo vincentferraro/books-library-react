@@ -1,12 +1,10 @@
 
 import './App.css';
 import Welcome from './component/Welcome'
-
+import Clock from './component/Clock'
 function App() {
   
-  function setName(name) {
-    return name
-  }
+  
   
   function Avatar(props) {
     return (
@@ -42,8 +40,8 @@ function App() {
   return (
     <div>
        
-      <Card />
-
+      <Welcome name='Vinc' />
+      <Clock name='Vincenzo'/>
     </div>
     
   )
