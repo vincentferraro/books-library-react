@@ -1,25 +1,57 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Welcome from './component/Welcome'
 
 function App() {
+  
+  function setName(name) {
+    return name
+  }
+  
+  function Avatar(props) {
+    return (
+      <div>
+        <p>Prenom: {props.user.name}</p>
+        <p>Nom: {props.user.surname }</p>
+      </div>
+    )
+  }
+  function Comment(props) {
+    return (
+
+      <div>
+        <p> Commentaire de {props.author}: </p>
+        <textarea />
+      </div>
+    )
+  }
+
+  function Card() {
+    const author = {
+      name: 'Kad',
+      surname : 'Ferr'
+    }
+    return (
+      <div>
+        <Avatar user={author}/>
+        <Comment author='User1' />
+      </div>
+    )
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       
+      <Card />
+
     </div>
-  );
+    
+  )
+     
+    
+
+  
+  
 }
 
 export default App;
