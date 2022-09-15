@@ -1,9 +1,7 @@
 div {
-  height: 7rem;
+  height: 50vh;
   background-color: #01ADEF;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
 }
 
 img {

@@ -2,6 +2,9 @@
 import './App.css';
 import Welcome from './component/Welcome'
 import Clock from './component/Clock'
+import LoggingButton from './component/LoggingButton'
+import LoggingButton2 from './component/LoggingButton2';
+
 function App() {
   
   
@@ -41,7 +44,9 @@ function App() {
     <div>
        
       <Welcome name='Vinc' />
-      <Clock name='Vincenzo'/>
+      <Clock name='Vincenzo' />
+      <LoggingButton />
+      <LoggingButton2 />
     </div>
     
   )
