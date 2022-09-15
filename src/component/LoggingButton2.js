@@ -6,7 +6,7 @@ function LoggingButton2() {
         console.log('Click')
 
     }
-
+    
     return (
         <button onClick={handleClick} >Click</button>
     )

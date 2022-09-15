@@ -1,60 +1,30 @@
+import { Component } from "react";
+import Button from './component/Button'
 
-import './App.css';
-import Welcome from './component/Welcome'
-import Clock from './component/Clock'
-import LoggingButton from './component/LoggingButton'
-import LoggingButton2 from './component/LoggingButton2';
+import './App.css'
+class App extends Component{
+  constructor(props) {
+    super(props)
+    this.state = {
+           isHome : true,
+           isBooks: false,
+           isAbout: false
+          }
+  }
 
-function App() {
-  
-  
-  
-  function Avatar(props) {
+  render() {
     return (
+      
       <div>
-        <p>Prenom: {props.user.name}</p>
-        <p>Nom: {props.user.surname }</p>
+        <nav>
+          <Button name="Home" />
+          <Button name="Books" />
+          <Button name="About"/>
+        </nav>
       </div>
     )
   }
-  function Comment(props) {
-    return (
-
-      <div>
-        <p> Commentaire de {props.author}: </p>
-        <textarea />
-      </div>
-    )
-  }
-
-  function Card() {
-    const author = {
-      name: 'Kad',
-      surname : 'Ferr'
-    }
-    return (
-      <div>
-        <Avatar user={author}/>
-        <Comment author='User1' />
-      </div>
-    )
-  }
-  
-  return (
-    <div>
-       
-      <Welcome name='Vinc' />
-      <Clock name='Vincenzo' />
-      <LoggingButton />
-      <LoggingButton2 />
-    </div>
-    
-  )
-     
-    
-
-  
   
 }
 
-export default App;
+export default App
