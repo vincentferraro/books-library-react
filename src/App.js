@@ -1,29 +1,19 @@
-import { Component } from "react";
-import Button from './component/Button'
+import NumberList from './component/NumberList'
 
 import './App.css'
-class App extends Component{
-  constructor(props) {
-    super(props)
-    this.state = {
-           isHome : true,
-           isBooks: false,
-           isAbout: false
-          }
-  }
 
-  render() {
+function App (){
+  
+  const numbers=["hello","bonjour","salam"]
+
     return (
       
       <div>
-        <nav>
-          <Button name="Home" />
-          <Button name="Books" />
-          <Button name="About"/>
-        </nav>
+        
+      <NumberList numbers={numbers}/>
       </div>
     )
-  }
+  
   
 }
 
