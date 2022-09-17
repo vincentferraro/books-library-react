@@ -1,16 +1,16 @@
 import NumberList from './component/NumberList'
 
 import './App.css'
+import Form from './component/Form'
 
 function App (){
   
-  const numbers=["hello","bonjour","salam"]
-
+  
     return (
       
       <div>
         
-      <NumberList numbers={numbers}/>
+      <Form />
       </div>
     )
   
