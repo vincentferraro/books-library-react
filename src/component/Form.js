@@ -4,15 +4,20 @@ class Form extends Component{
 
     constructor(props) {
         super(props)
-        this.state = { text: 'Ecrire ici' }
+        this.state = {
+            text: 'Ecrire ici',
+            textarea: 'Ecrire ici aussi'
+        }
         
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleChange(event){
-        this.setState({ text: event.target.value })
-        
+        const target = event.target
+        this.setState({
+            [target.name]:target.value
+        })
     }
 
     handleSubmit(event) {
@@ -26,7 +31,11 @@ class Form extends Component{
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Text:
-                    <input type="text" value={this.state.value} onChange={this.handleChange} />
+                    <input name="text" type="text" value={this.state.value} onChange={this.handleChange} />
+                </label>
+                <label>
+                    Text area:
+                    <textarea name="textarea"value={this.state.value} onChange={this.handleChange}/>
                 </label>
                 <input type="submit" value="Envoyer"/>
                 
